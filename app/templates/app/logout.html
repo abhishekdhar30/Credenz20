@@ -1,0 +1,13 @@
+{% extends "app/base.html" %}
+{% block content %}
+<h1>{{username}}</h1>
+       <div class="border-top pt-3">
+           <small class="text-muted">
+               <a  href="{% url 'logout' %}"></a>
+           </small>
+       </div>
+<small class="navbar-nav">
+              <a class="nav-item nav-link" href="{% url 'logout' %}">Logout</a>
+
+
+{% endblock content %}

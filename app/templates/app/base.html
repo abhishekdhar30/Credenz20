@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>{% block title %}Simple is Better Than Complex{% endblock %}</title>
+  </head>
+  <body>
+    <header>
+    </header>
+ <div>
+ </div>
+      <hr>
+    <main>
+         {% if messages %}
+          {% for message in messages %}
+             <div class="alert alert-{{messages.tags}}">
+               {{message}}
+             </div>
+          {% endfor %}
+        {% endif %}
+      {% block content %}
+      {% endblock %}
+    </main>
+  </body>
+</html>

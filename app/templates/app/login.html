@@ -1,0 +1,23 @@
+{% extends "app/base.html" %}
+{% block content %}
+   <div class="content-section">
+       <form method="POST">
+           {% csrf_token %}
+           <fieldset class="form-group">
+               <legend class="border-bottom mb-4">Log In</legend>
+              {{form.as_p}}
+           </fieldset>
+           <div class="form-group">
+               <button class="btn btn-outline-info" type="submit">Login</button>
+           </div>
+       </form>
+       <div
+       </div>
+   </div>
+<small class="navbar-nav">
+            {% if user.is_authenticated %}
+              <a class="nav-item nav-link" href="{% url 'logout' %}">Logout</a>
+            {% else %}
+                To register account<a class="nav-item nav-link" href="{% url 'register' %}">Register</a>
+            {% endif %}</small>
+{% endblock content %}
